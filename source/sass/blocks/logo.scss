@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  column-gap: 20px;
+}
+
+.logo__text {
+  display: none;
+
+  @include desktop {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

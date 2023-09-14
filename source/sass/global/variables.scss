@@ -1,1 +1,22 @@
-/* здесь используйте глобальные переменные */
+/* COLORS */
+$white: #ffffff;
+$white-10: #f8f8f8;
+$beige-10: #f3ebe1;
+$black-10: #333333;
+$gray-10: #e5e6e8;
+$gray-20: #e2e2e2;
+$gray-30: #bdbdbd;
+$violet-10: #f0ebff;
+$violet-20: #eae6fc;
+$violet-30: #9070ec;
+$violet-40: #7859cf; //rgba(120, 89, 207, 0.25)
+$violet-50: #593cac;
+
+/* FONTS */
+$basic-font: "Montserrat", "Arial", sans-serif;
+
+/* VIEWPORTS */
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1439px;
+$desktop: 1440px;

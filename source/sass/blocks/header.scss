@@ -1,5 +1,88 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.header__container {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: auto;
+  cursor: pointer;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.header__navigation-site {
+  @include mobile-only {
+    &--closed {
+      display: none;
+    }
+
+    &--nojs,
+    &--opened {
+      order: 1;
+      display: block;
+      min-width: 100vw;
+      margin-left: -20px;
+    }
+  }
+
+  @include tablet {
+    margin-right: 60px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+  }
+}
+
+.header__toggle {
+  padding: 30px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background-color: $white;
+  margin-right: -20px;
+
+  @include tablet {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $black-10;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--closed {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#burger");
+    }
+  }
+
+  &--opened {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#cross-close");
+    }
+  }
+
+  &--closed,
+  &--opened {
+    &:active {
+      background-color: $violet-10;
+    }
+  }
+
+  &--nojs {
+    display: none;
+  }
 }
