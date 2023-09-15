@@ -1,0 +1,5 @@
+.promo__container {
+  @include tablet-only {
+    margin-bottom: 188px;
+  }
+}

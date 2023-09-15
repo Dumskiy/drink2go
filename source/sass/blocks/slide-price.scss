@@ -1,0 +1,17 @@
+.slide-price {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.slide-price__old-value {
+  color: $violet-40;
+  text-decoration: line-through;
+}
+
+.slide-price__current-value {
+  font-size: 20px;
+  font-weight: 600;
+}

@@ -4,6 +4,7 @@ const swiper = new Swiper('.swiper', {
   speed: 300,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',

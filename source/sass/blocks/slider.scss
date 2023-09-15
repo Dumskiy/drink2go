@@ -1,0 +1,116 @@
+.slider {
+  @include tablet-only {
+    overflow-y: visible;
+  }
+
+  .slider__pagination {
+    bottom: 60px;
+  }
+}
+
+.slider__pagination {
+  display: none;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 62px);
+    gap: 8px;
+    justify-content: center;
+    bottom: 60px;
+  }
+}
+
+.slider__pagination > span {
+  width: 100%;
+  border-radius: 0;
+  height: 4px;
+  cursor: pointer;
+  background-color: $white;
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    background-color: $violet-40;
+    opacity: 0.25;
+  }
+
+  &:active {
+    background-color: $violet-40;
+  }
+
+  &[aria-current="true"] {
+    background-color: $violet-40;
+  }
+}
+
+.slider__button {
+  height: 100%;
+  top: 0;
+  margin: 0;
+  width: 20px;
+
+  @include tablet {
+    width: 80px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $violet-40;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--prev {
+    left: 0;
+
+    @include desktop {
+      left: calc((100% - $desktop) / 2);
+    }
+
+    &::after {
+      mask-image: url("../../img/icons/stack.svg#arrow-left");
+    }
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, $white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    @include desktop {
+      right: calc((100% - $desktop) / 2);
+    }
+
+    &::after {
+      mask-image: url("../../img/icons/stack.svg#arrow-right");
+    }
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(270deg, $white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &:disabled {
+    &::after {
+      background-color: $gray-30;
+    }
+  }
+}
