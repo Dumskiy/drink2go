@@ -32,16 +32,19 @@
     &:hover,
     &:focus {
       color: $violet-40;
-      &::before {
-        background-color: $violet-40;
-      }
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background-color: $violet-40;
     }
 
     &:active {
       color: $violet-40;
-      &::before {
-        background-color: $violet-40;
-      }
+    }
+
+    &:active::before {
+      background-color: $violet-40;
     }
   }
 

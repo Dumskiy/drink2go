@@ -1,0 +1,57 @@
+.social-list {
+  @include clear-list;
+  display: flex;
+  gap: 20px;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-position: center center;
+    background-color: $gray-30;
+  }
+
+  &--vkontakte {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#vkontakte");
+    }
+  }
+
+  &--pinterest {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#pinterest");
+    }
+  }
+
+  &--odnoklassniki {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#odnoklassniki");
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $violet-10;
+
+    &::before {
+      background-color: $violet-40;
+    }
+  }
+
+  &:active {
+    background-color: rgb(120, 89, 207, 0.75);
+
+    &::before {
+      background-color: $violet-40;
+    }
+  }
+}

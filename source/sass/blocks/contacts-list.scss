@@ -1,0 +1,51 @@
+.contacts-list {
+  @include clear-list;
+  padding-top: 8px;
+  display: grid;
+  row-gap: 16px;
+}
+
+.contacts-list__item {
+  display: flex;
+  column-gap: 6px;
+
+  &::before {
+    content: "";
+    min-width: 13px;
+    height: 16px;
+    margin-top: 2px;
+    background-color: $violet-40;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &--address {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#address");
+    }
+  }
+
+  &--phone {
+    &::before {
+      mask-image: url("../../img/icons/stack.svg#phone");
+    }
+  }
+}
+
+.contacts-list__address {
+  font-style: normal;
+}
+
+.contacts-list__phone {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $violet-30;
+  }
+
+  &:active {
+    color: $violet-50;
+  }
+}

@@ -1,0 +1,37 @@
+.copyright__link {
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4px;
+  text-decoration: none;
+  color: $gray-30;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 16px;
+    background-color: $gray-30;
+    background-position: center center;
+    background-repeat: no-repeat;
+    mask-image: url("../../img/icons/stack.svg#html-academy");
+  }
+
+  &:hover,
+  &:focus {
+    color: $violet-40;
+
+    &::after {
+      background-color: $violet-40;
+    }
+  }
+
+  &:active {
+    color: $violet-50;
+
+    &::after {
+      background-color: $violet-50;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.map__container {
+  background-color: #edf0ec;
+}
+
+.map__image {
+  display: none;
+  margin: 0 auto;
+  height: auto;
+
+  @include tablet {
+    width: 768px;
+  }
+
+  @include desktop {
+    width: 1440px;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}

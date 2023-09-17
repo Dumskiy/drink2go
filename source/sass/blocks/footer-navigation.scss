@@ -1,0 +1,29 @@
+.footer-navigation {
+  @include clear-list;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+}
+
+.footer-navigation__item {
+  @include mobile-only {
+    padding: 20px;
+    width: 100vw;
+    margin-left: -20px;
+    border-top: 1px solid $violet-10;
+
+    &:last-child {
+      border-bottom: 1px solid $violet-10;
+    }
+  }
+}
+
+.footer-navigation__title {
+  font-size: 14px;
+  color: $violet-40;
+  margin: 0;
+  margin-bottom: 12px;
+}
