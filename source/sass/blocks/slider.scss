@@ -64,6 +64,7 @@
     background-color: $violet-40;
     background-repeat: no-repeat;
     background-position: center center;
+    mask-image: url("../../img/icons/stack.svg#arrow-slider");
   }
 
   &--prev {
@@ -71,10 +72,6 @@
 
     @include desktop {
       left: calc((100% - $desktop) / 2);
-    }
-
-    &::after {
-      mask-image: url("../../img/icons/stack.svg#arrow-left");
     }
 
     &:hover,
@@ -95,7 +92,7 @@
     }
 
     &::after {
-      mask-image: url("../../img/icons/stack.svg#arrow-right");
+      transform: rotate(180deg);
     }
 
     &:hover,

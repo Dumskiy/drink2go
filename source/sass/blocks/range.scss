@@ -1,0 +1,99 @@
+.range__scale {
+  position: relative;
+  height: 4px;
+  background-color: $gray-20;
+  border-radius: 2px;
+  margin: 10px 0 34px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  background-color: $violet-30;
+}
+
+.range__toggle {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: $white;
+  outline: 2px solid $violet-30;
+  border: 2px solid $white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--min {
+    top: -9px;
+    left: -12px;
+  }
+
+  &--max {
+    top: -9px;
+    right: -12px;
+  }
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: $violet-40;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $violet-40;
+  }
+}
+
+.range__wrapper-inputs {
+  display: flex;
+  gap: 44px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $gray-30;
+  }
+
+  @include tablet {
+    gap: 48px;
+  }
+}
+
+.range__input {
+  @include clear-input;
+  background-color: $white;
+  padding: 6px 8px;
+  max-width: 118px;
+  border: 2px solid $violet-30;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+
+  @include tablet {
+    max-width: 87px;
+  }
+
+  @include desktop {
+    max-width: 134px;
+  }
+
+  &::placeholder {
+    color: $gray-30;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $violet-50;
+  }
+
+  &:disabled {
+    border-color: $gray-20;
+    background-color: $white-10;
+  }
+}

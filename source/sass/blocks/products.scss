@@ -1,0 +1,30 @@
+.products {
+  display: grid;
+}
+
+.products__sorting {
+  justify-self: end;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 26px;
+  }
+}
+
+.products__list {
+  @include clear-list;
+  margin-bottom: 40px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  @include tablet {
+    margin-bottom: 70px;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+  }
+}
+
+.products__pagination {
+  justify-self: end;
+}

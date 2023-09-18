@@ -1,0 +1,52 @@
+.sorting {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  position: relative;
+}
+
+.sorting__select {
+  @include clear-input;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: lowercase;
+  color: $violet-40;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+
+  &:hover,
+  &:focus {
+    background-color: $violet-10;
+  }
+
+  &:focus-visible + .sorting__icon {
+    transform: translateY(-50%) rotate(-270deg);
+  }
+}
+
+.sorting__icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $violet-40;
+  mask-image: url("../../img/icons/stack.svg#arrow");
+}
+
+.sorting__option {
+  background-color: $white;
+
+  &[selected] {
+    color: $white;
+    background-color: $violet-40;
+  }
+}
