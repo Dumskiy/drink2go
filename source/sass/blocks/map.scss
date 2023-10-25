@@ -2,6 +2,24 @@
   background-color: #edf0ec;
 }
 
+.map__interactive {
+  display: block;
+  width: 100%;
+  border: none;
+
+  @include tablet {
+    min-height: 480px;
+  }
+
+  @include desktop {
+    min-height: 540px;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
 .map__image {
   display: none;
   margin: 0 auto;

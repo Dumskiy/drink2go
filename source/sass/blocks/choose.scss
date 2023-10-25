@@ -54,6 +54,10 @@
 .choose__input {
   &:checked + .choose__mark--radio {
     border-color: $violet-40;
+
+    &::before {
+      background-color: $violet-40;
+    }
   }
 
   &:hover:not(:disabled):not(:checked) + .choose__mark--radio,
